@@ -11,7 +11,7 @@ class FourDigTSScheduler(
     @Autowired
     private val digTextRepository: DigTextRepository
 ) {
-    @Scheduled(fixedRate = 10000)
+    @Scheduled(fixedRate = 60000)
     fun organizeDigText() {
         val digTextList = digTextRepository.findAll()
         val deleteIndexList = ArrayList<Int>()

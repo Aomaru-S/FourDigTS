@@ -48,9 +48,9 @@ class FourDigTSController(
     }
 
     @GetMapping("/{digits:[0-9]{4}}")
-    fun showText(@PathVariable digits: String): String {
-        val text = digTextRepository.findById(digits).orElse(null) ?: return "index"
-        println(text)
-        return "index"
+    fun showText(@PathVariable digits: String, model: Model): String {
+        val text = digTextRepository.findById(digits).orElse(null)?.text ?: return "index"
+        model.addAttribute("text", text)
+        return "show_text"
     }
 }
