@@ -5,9 +5,24 @@
     <title>4DigTS</title>
 </head>
 <body>
+<h1>4DigTS</h1>
 <form action="#" th:action="@{/perform_share}" method="post">
-    <input type="text" name="text" placeholder="text">
+    <label>
+        <input type="text" name="text" placeholder="text">
+    </label>
     <input type="submit" value="Share">
 </form>
+<h2>使い方</h2>
+<ol>
+    <li>この画面で共有したいテキストを入力して、Shareボタンを押すよ！</li>
+    <li>発行された4桁の数字を控えて、共有したい相手に伝えるよ！</li>
+    <li>共有相手は、「https://www.aoi-ryo.com/4digts/」のあとにその4桁の数字を追加して、<br>
+    「https://www.aoi-ryo.com/4digts/1234」みたいなURLにアクセスすると、そのテキストが表示されるよ！</li>
+</ol>
+<h2>注意</h2>
+<ul>
+    <li>共有されたテキストは1分で消えるよ！消えたら困るテキストは共有しないでね！</li>
+    <li>共有されたテキストは誰かに見られるかも！見られたら困るテキストは共有しないでね！</li>
+</ul>
 </body>
 </html>
